@@ -5,8 +5,8 @@
 #ifndef ASSIGNMENT3_CALCULATOR_H
 #define ASSIGNMENT3_CALCULATOR_H
 
-#include <QtWidgets/QDialog>
-#include <QtWidgets/QGroupBox>
+#include <QtWidgets>
+#include "fractionGroup.h"
 
 class Calculator : public QDialog {
     Q_OBJECT
@@ -15,7 +15,6 @@ public:
     Calculator();
 
 private:
-    void createFractionBox(QGroupBox *fraction);
     void createOperations();
     void createEquals();
 
@@ -24,11 +23,11 @@ private:
     void multiplyClicked();
     void divideClicked();
 
-    QGroupBox *fractionOneBox;
+    FractionGroup *fractionOneBox;
     QGroupBox *operationsBox;
-    QGroupBox *fractionTwoBox;
+    FractionGroup *fractionTwoBox;
     QPushButton *equalsBtn;
-    QGroupBox *resultBox;
+    FractionGroup *resultBox;
 };
 
 #endif //ASSIGNMENT3_CALCULATOR_H

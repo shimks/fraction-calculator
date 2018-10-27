@@ -19,7 +19,7 @@ find_package(Qt5Widgets CONFIG REQUIRED)
 # Populate a CMake variable with the sources
 set(CALCULATOR_SRCS
         main.cpp
-        calculator.h calculator.cpp)
+        calculator.h calculator.cpp fractionGroup.h fractionGroup.cpp)
 # Tell CMake to create the helloworld executable
 add_executable(calculator WIN32 ${CALCULATOR_SRCS})
 

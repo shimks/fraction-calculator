@@ -2,13 +2,14 @@
 // Created by KYUSUNG on 25/10/2018.
 //
 
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QLineEdit>
+#include <QtWidgets>
 #include "calculator.h"
+#include "fractionGroup.h"
 
 Calculator::Calculator() {
-    createFractionBox(fractionOneBox);
+    fractionOneBox = new FractionGroup;
+    fractionTwoBox = new FractionGroup;
+    resultBox = new FractionGroup;
 //    createOperations();
 //    createFractionBox(fractionTwoBox);
 //    createEquals();
@@ -20,12 +21,4 @@ Calculator::Calculator() {
 //    layout->addWidget(fractionTwoBox);
 //    layout->addWidget(equalsBtn);
 //    layout->addWidget(resultBox);
-}
-
-void Calculator::createFractionBox(QGroupBox *fraction) {
-    fraction = new QGroupBox;
-    QVBoxLayout *layout = new QVBoxLayout;
-    QLineEdit *numerator = new QLineEdit;
-    QFrame *fractionLine = new QFrame;
-    QLineEdit *denominator = new QLineEdit;
 }
